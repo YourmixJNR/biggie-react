@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ISvg } from "../../types/svg";
 
-export const Email = ({ className }: ISvg) => {
+const EmailSvg = ({ className }: ISvg) => {
   return (
     <svg
       width="24"
@@ -23,3 +23,5 @@ export const Email = ({ className }: ISvg) => {
     </svg>
   );
 };
+
+export default EmailSvg;
