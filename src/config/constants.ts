@@ -20,9 +20,9 @@ const APP_CONSTANTS = {
         DASHBOARD: '/app',
         FUNDME: '/app/fund-me',
         AUTH: {
-            LOGIN: '/auth/login',
-            SIGNUP: '/auth/signup',
-            FORGOT_PASSWORD: '/auth/forgot-password',
+            LOGIN: '/login',
+            SIGNUP: '/signup',
+            FORGOT_PASSWORD: '/forgot-password',
         },
     },
 } as const
