@@ -12,12 +12,11 @@ const API_CONFIG = {
             PROFILE: '/users/profile',
             PREFERENCES: '/users/preferences',
         },
-        // ... other endpoint definitions
     },
     HEADERS: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
     },
-} as const; 
+} as const;
 
 export default API_CONFIG

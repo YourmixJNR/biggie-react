@@ -13,7 +13,6 @@ const theme = {
             light: '#ef5350',
             dark: '#c62828',
         },
-        // ... other color definitions
     },
     spacing: {
         xs: '4px',
