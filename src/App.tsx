@@ -1,9 +1,18 @@
 import { useEffect } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { Scroll } from "./animation";
 import { RootLayout, DashboardLayout } from "./layouts";
-import { NotFound, Home, About, Dashboard, FundMe, SignIn, SignUp } from "./pages";
+import { PrivateRoute, PublicRoute } from "./routes";
 import { APP_CONSTANTS } from "./config";
+import { Scroll } from "./animation";
+import {
+  NotFound,
+  Home,
+  About,
+  Dashboard,
+  FundMe,
+  SignIn,
+  SignUp,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: APP_CONSTANTS.ROUTES.AUTH.LOGIN,
-        element: <SignIn />,
+        element: <PublicRoute element={<SignIn />} />,
       },
       {
         path: APP_CONSTANTS.ROUTES.AUTH.SIGNUP,
@@ -34,6 +43,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: APP_CONSTANTS.ROUTES.DASHBOARD,
     element: <DashboardLayout />,
@@ -41,7 +51,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <PrivateRoute element={<Dashboard />} />,
       },
 
       {
@@ -55,6 +65,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 export default function App() {
   useEffect(() => {
     Scroll();
