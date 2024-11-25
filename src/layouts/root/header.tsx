@@ -1,13 +1,21 @@
 import { H1 } from "../../components/typography";
+import { Link } from "react-router-dom";
+import { APP_CONSTANTS } from "../../config";
 
 const Header = () => {
   return (
     <header>
-      <H1>biggie react</H1>
+      <Link to={APP_CONSTANTS.ROUTES.HOME}>
+        <H1>biggie react</H1>
+      </Link>
       <nav>
         <ul>
-          <li>react-js</li>
-          <li>boilerplate</li>
+          <Link to={APP_CONSTANTS.ROUTES.ABOUT}>
+            <li>react-js</li>
+          </Link>
+          <Link to={APP_CONSTANTS.ROUTES.DASHBOARD}>
+            <li>boilerplate</li>
+          </Link>
         </ul>
       </nav>
     </header>

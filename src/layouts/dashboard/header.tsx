@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { H1 } from "../../components/typography";
+import { APP_CONSTANTS } from "../../config";
 
 const Header = () => {
   return (
@@ -6,8 +8,12 @@ const Header = () => {
       <H1>biggie react admin</H1>
       <nav>
         <ul>
-          <li>react-js</li>
-          <li>boilerplate</li>
+          <Link to={APP_CONSTANTS.ROUTES.HOME}>
+            <li>react-js</li>
+          </Link>
+          <Link to={APP_CONSTANTS.ROUTES.FUNDME}>
+            <li>boilerplate</li>
+          </Link>
         </ul>
       </nav>
     </header>

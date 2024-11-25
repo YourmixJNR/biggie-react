@@ -17,7 +17,8 @@ const APP_CONSTANTS = {
     ROUTES: {
         HOME: '/',
         ABOUT: '/about',
-        DASHBOARD: '/dashboard',
+        DASHBOARD: '/app',
+        FUNDME: '/app/fund-me',
         AUTH: {
             LOGIN: '/auth/login',
             SIGNUP: '/auth/signup',
