@@ -3,6 +3,7 @@ const API_CONFIG = {
     RETRY_ATTEMPTS: 3,
     ENDPOINTS: {
         AUTH: {
+            SIGNUP: '/auth/signup',
             LOGIN: '/auth/login',
             LOGOUT: '/auth/logout',
             REFRESH_TOKEN: '/auth/refresh',

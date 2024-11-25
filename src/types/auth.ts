@@ -3,22 +3,18 @@ export type UserDto = {
     email: string
     password: string
     gender: string
-    adminKey: string
 }
 
 export type LoginDto = {
     email: string
     password: string
-    adminKey?: string
 }
 
 export interface IUser {
     _id: string
-    fullname: string
     email: string
+    fullname: string
     password?: string
     gender: 'M' | 'F' | ''
     verified: boolean
-    authority: number
-    leave: boolean
 }

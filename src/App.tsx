@@ -35,7 +35,8 @@ const router = createBrowserRouter([
       },
       {
         path: APP_CONSTANTS.ROUTES.AUTH.LOGIN,
-        element: <PublicRoute element={<SignIn />} />,
+        element: <SignIn />,
+        // element: <PublicRoute element={<SignIn />} />,
       },
       {
         path: APP_CONSTANTS.ROUTES.AUTH.SIGNUP,

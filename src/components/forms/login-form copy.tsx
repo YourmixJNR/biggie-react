@@ -10,7 +10,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const navigate = useNavigate();
 
@@ -21,8 +21,10 @@ const LoginForm = () => {
     setPassword(e.target.value);
 
   const submitEmail = (): void => {
+    const loginCre = {email, password}
     try {
       //   storage.setAuthToken(email);
+      dispatch(signIn(loginCre) as any)
       navigate(APP_CONSTANTS.ROUTES.DASHBOARD);
     } catch (err) {
       console.log(err);
