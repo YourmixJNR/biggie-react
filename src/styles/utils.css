@@ -1,0 +1,31 @@
+/* hide the default checkbox */
+.auth input[type="checkbox"] {
+  appearance: none;
+  /* For modern browsers */
+  -webkit-appearance: none;
+  /* For Safari */
+  -moz-appearance: none;
+  /* For Firefox */
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid #5c5c5c;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* checked state */
+input[type="checkbox"]:checked {
+  background-color: #151a20;
+  border-color: #151a20;
+  outline: none;
+}
+
+/* add a custom check-mark */
+input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,6 +14,10 @@ import {
   SignUp,
 } from "./pages";
 
+// import global styles
+import "./styles/overrides.css";
+import "./styles/utils.css";
+
 const router = createBrowserRouter([
   {
     path: APP_CONSTANTS.ROUTES.HOME,
