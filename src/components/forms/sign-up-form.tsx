@@ -1,18 +1,18 @@
 import { Button, Input } from "../ui";
 import { useState } from "react";
-// import { storage } from "../../utils";
-import { signIn } from "../../store/auth/reducer";
-import { useDispatch } from "react-redux";
+import { storage } from "../../utils";
 import { useNavigate } from "react-router-dom";
 import { APP_CONSTANTS } from "../../config";
 
-const LoginForm = () => {
+const SignUpForm = () => {
+  const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const dispatch = useDispatch()
-
   const navigate = useNavigate();
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setName(e.target.value);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setEmail(e.target.value);
@@ -21,10 +21,8 @@ const LoginForm = () => {
     setPassword(e.target.value);
 
   const submitEmail = (): void => {
-    const loginCre = {email, password}
     try {
-      //   storage.setAuthToken(email);
-      dispatch(signIn(loginCre) as any)
+      storage.setAuthToken(email);
       navigate(APP_CONSTANTS.ROUTES.DASHBOARD);
     } catch (err) {
       console.log(err);
@@ -33,6 +31,7 @@ const LoginForm = () => {
 
   return (
     <div>
+      <Input type="text" value={name} onChange={handleNameChange} />
       <Input type="email" value={email} onChange={handleEmailChange} />
       <Input type="password" value={password} onChange={handlePasswordChange} />
       <Button type="button" className="text-2xl" onClick={submitEmail}>
@@ -42,4 +41,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUpForm;

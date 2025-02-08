@@ -1,8 +1,6 @@
 import { Button, Input } from "../ui";
 import { useState } from "react";
-// import { storage } from "../../utils";
-import { signIn } from "../../store/auth/reducer";
-import { useDispatch } from "react-redux";
+import { storage } from "../../utils";
 import { useNavigate } from "react-router-dom";
 import { APP_CONSTANTS } from "../../config";
 
@@ -10,7 +8,6 @@ const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -22,7 +19,7 @@ const LoginForm = () => {
 
   const submitEmail = (): void => {
     try {
-      //   storage.setAuthToken(email);
+        storage.setAuthToken(email);
       navigate(APP_CONSTANTS.ROUTES.DASHBOARD);
     } catch (err) {
       console.log(err);
