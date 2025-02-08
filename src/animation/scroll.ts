@@ -7,7 +7,7 @@ export default function scroll() {
       return Math.min(1, 1.001 - Math.pow(2, -10 * t));
     },
     infinite: false,
-    // @ts-expect-error idk why this no dey work
+    // @ts-expect-error
     smooth: true,
   });
 

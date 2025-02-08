@@ -1,4 +1,11 @@
-import { useState } from 'react';
+/**
+ * custom hook to manage the state of a modal.
+ *
+ * @returns {Object} an object:
+ *
+ */
+
+import { useState } from "react";
 
 const useModal = () => {
   const [isOpenModal, setModalOpen] = useState<boolean>(false);

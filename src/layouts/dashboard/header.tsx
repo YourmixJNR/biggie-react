@@ -11,7 +11,7 @@ const Header = () => {
           <Link to={APP_CONSTANTS.ROUTES.HOME}>
             <li>react-js</li>
           </Link>
-          <Link to={APP_CONSTANTS.ROUTES.FUNDME}>
+          <Link to={APP_CONSTANTS.ROUTES.FUND_ME}>
             <li>boilerplate</li>
           </Link>
         </ul>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { RootLayout, DashboardLayout } from "./layouts";
-import { PrivateRoute, PublicRoute } from "./routes";
+import { PrivateRoute } from "./routes";
 import { APP_CONSTANTS } from "./config";
 import { Scroll } from "./animation";
 import {
@@ -36,7 +36,6 @@ const router = createBrowserRouter([
       {
         path: APP_CONSTANTS.ROUTES.AUTH.LOGIN,
         element: <SignIn />,
-        // element: <PublicRoute element={<SignIn />} />,
       },
       {
         path: APP_CONSTANTS.ROUTES.AUTH.SIGNUP,
@@ -60,7 +59,7 @@ const router = createBrowserRouter([
         element: <NotFound />,
       },
       {
-        path: APP_CONSTANTS.ROUTES.FUNDME,
+        path: APP_CONSTANTS.ROUTES.FUND_ME,
         element: <FundMe />,
       },
     ],

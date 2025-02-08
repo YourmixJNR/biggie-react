@@ -1,5 +1,11 @@
-import { useState } from "react";
+/**
+ * custom hook to manage step-based navigation.
+ *
+ * @returns {Object} An object containing:
+ *
+ */
 
+import { useState } from "react";
 function useStep() {
   const [currentStep, setCurrentStep] = useState<number>(1);
 
